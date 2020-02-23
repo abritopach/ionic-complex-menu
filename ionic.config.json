@@ -1,0 +1,7 @@
+{
+  "name": "ionic-complex-menu",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

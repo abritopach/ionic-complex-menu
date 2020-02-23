@@ -1,7 +1,63 @@
 <ion-app>
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay">
+      <ion-header>
+        <ion-toolbar>
+          <ion-item>
+            <ion-avatar slot="start">
+              <img src="https://i.pravatar.cc/300">
+            </ion-avatar>
+            <ion-label>Item Avatar</ion-label>
+            <ion-icon slot="end" name="ellipsis-vertical"></ion-icon>
+          </ion-item>
+        </ion-toolbar>
+      </ion-header>
       <ion-content>
+        <!-- Actions buttons. -->
+        <ion-grid>
+          <ion-row>
+            <ion-col size="3">
+              <ion-button fill="clear">
+                <ion-icon slot="icon-only" name="chatbubbles"></ion-icon>
+              </ion-button>
+            </ion-col>
+            <ion-col size="3">
+              <ion-button fill="clear">
+                <ion-icon slot="icon-only" name="call"></ion-icon>
+              </ion-button>
+            </ion-col>
+            <ion-col size="3">
+              <ion-button fill="clear">
+                <ion-icon slot="icon-only" name="people"></ion-icon>
+              </ion-button>
+            </ion-col>
+            <ion-col size="3">
+              <ion-button fill="clear">
+                <ion-icon slot="icon-only" name="cloud"></ion-icon>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+        <!-- Searchbar with cancel button always shown -->
+        <ion-searchbar placeholder="Search" showCancelButton="focus"></ion-searchbar>
+
+        <ion-button expand="block" fill="outline">New chat</ion-button>
+
+        <!-- List of items. -->
+        <ion-list>
+          <ion-item *ngFor="let number of [0,1,2,3,4,5,6,7,8,9]">
+            <ion-avatar slot="start">
+              <img src="https://i.pravatar.cc/300?img={{number}}">
+            </ion-avatar>
+            <ion-label>
+              <ion-icon name="lock-closed" color="secondary"></ion-icon> Item Avatar <ion-icon name="volume-mute"></ion-icon>
+              <p>Hello</p>
+            </ion-label>
+            <ion-badge slot="end">3</ion-badge>
+          </ion-item>
+        </ion-list>
+
         <ion-list id="inbox-list">
           <ion-list-header>Inbox</ion-list-header>
           <ion-note>hi@ionicframework.com</ion-note>

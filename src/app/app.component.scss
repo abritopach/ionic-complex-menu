@@ -117,3 +117,8 @@ ion-note {
 ion-item.selected {
   --color: var(--ion-color-primary);
 }
+
+ion-avatar {
+  width: 64px;
+  height: 64px;
+}

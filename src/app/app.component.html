@@ -42,7 +42,16 @@
         <!-- Searchbar with cancel button always shown -->
         <ion-searchbar placeholder="Search" showCancelButton="focus"></ion-searchbar>
 
-        <ion-button expand="block" fill="outline">New chat</ion-button>
+        <ion-button expand="block" fill="outline">Option 1</ion-button>
+
+        <ion-segment (ionChange)="segmentChanged($event)" color="primary">
+          <ion-segment-button value="friends">
+            <ion-label>Segment 1</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="enemies">
+            <ion-label>Segment 2</ion-label>
+          </ion-segment-button>
+        </ion-segment>
 
         <!-- List of items. -->
         <ion-list>
